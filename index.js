@@ -12,8 +12,8 @@ connectDB();
 // Routes
 app.use("/cards", cardRoutes);
 
-// ✅ VERY IMPORTANT FOR RENDER
-const PORT = process.env.PORT;
+// 🔥 CRITICAL FIX FOR RENDER
+const PORT = process.env.PORT || 10000;
 
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
