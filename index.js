@@ -12,6 +12,10 @@ connectDB();
 // Routes
 app.use("/cards", cardRoutes);
 
+app.get("/", (req, res) => {
+  res.send("API is running successfully 🚀");
+});
+
 // 🔥 CRITICAL FIX FOR RENDER
 const PORT = process.env.PORT || 10000;
 
